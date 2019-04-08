@@ -3,17 +3,26 @@
 // Cojo el input
 const inputEl = document.querySelector('#numberTest');
 // Cojo el botón
-const btnEl = document.querySelector('.btn__test');
+const btnEl = document.querySelector('.btn-test');
 // Cojo el texto de feedback al usuario
 const userFeedbackEl = document.querySelector('.user-feedback');
 // Cojo el contador de intentos
 const numberCounterEl = document.querySelector('.number-counter');
 
 
+function trialCounter() {
+    // cada vez que el usuario haga click en el botón se tiene que sumar + 1
+    
+    // mostrar cada click que hace en el contador de intentos
+    
+    
+    
+}
+
 function handleButtonClick(e) {
     e.preventDefault();
     
-    // Generar un número aleatorio y mostrarlo por la  consola 
+    // Generar un número aleatorio y muestralo por la  consola 
     const randomNumber = Math.ceil(Math.random() * (1, 100));
     console.log('Número random generado:', randomNumber);
     
@@ -36,7 +45,7 @@ function handleButtonClick(e) {
         userFeedbackEl.innerHTML = "Número demasiado bajo";
     }
 
-    // Actualizar el contador de intentos cada vez que el usuario pruebe
+    trialCounter();
     
 }
 

@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adivina el número</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <h1>Adivina el número</h1>
-    <p class="number-counter"></p>
-    <form>
-        <label for="numberTest">Introduce aquí tu número</label>
+    <p class="number-counter">0</p>
+    <form class="form-test">
+        <label class="numberTest__text" for="numberTest">Introduce aquí tu número</label>
         <input type="number" name="numberTest" id="numberTest">
-        <button class="btn__test" type="submit">Prueba</button>
+        <button class="btn-test" type="submit">Prueba</button>
     </form>
 
-    <h2 class="user-feedback">Escribe un número y dale a prueba</h2>
+    <p class="user-feedback">Escribe un número y dale a prueba</p>
     
     <script src="./js/main.js" type="text/javascript"></script>
 </body>
