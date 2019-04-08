@@ -32,8 +32,7 @@ function handleButtonClick(e) {
     
     // Acceder al contenido del input y mostrarlo en la consola
     const numberInput = parseInt(inputEl.value);
-    console.log('El contenido del input es:', numberInput);
-    
+    console.log('El contenido del input es:', numberInput);    
 
     // Comparar el número que el usuario ha escrito en el input con el número aleatorio y pintar el feedback correspondiente en la pantalla
     if(numberInput === number) {
