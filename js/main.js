@@ -8,6 +8,7 @@ const btnEl = document.querySelector('.btn-test');
 const userFeedbackEl = document.querySelector('.user-feedback');
 // Cojo el contador de intentos
 const numberCounterEl = document.querySelector('.number-counter');
+// Creo un contador
 let numberCounter = 0;
 
 const trialCounter = () => {
