@@ -183,14 +183,14 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    /* animation: 1.5s fly 0s linear infinite; */
+    animation: 1.5s fly 0s linear infinite;
 }
 
 .ufo__animation {
 }
 @media all and (min-width: 768px) {
     .ufo {
-        /* animation: 2s fly 0s linear infinite; */
+        animation: 3s fly 0s linear infinite;
        
     }
 }
