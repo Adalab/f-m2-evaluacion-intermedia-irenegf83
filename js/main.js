@@ -19,13 +19,13 @@ const trialCounter = () => {
     numberCounter = numberCounter + 1;
     numberCounterEl.innerHTML = numberCounter; 
 
-    if(numberCounter >= 5 && numberCounter < 10) {
+    if(numberCounter >= 3 && numberCounter < 5) {
         textFeedback(infoInvasionTextEl, 'Llevas varios intentos, ¡nos van a atacar!');
-    } else if(numberCounter >= 10 && numberCounter < 15) {
+    } else if(numberCounter >= 5 && numberCounter < 8) {
         textFeedback(infoInvasionTextEl, '¡Estamos perdidos!');
-    } else if(numberCounter >= 15 && numberCounter < 20) {
+    } else if(numberCounter >= 8 && numberCounter < 11) {
         textFeedback(infoInvasionTextEl, '¡Ay, ay, ay!');
-    } else if(numberCounter >= 20) {
+    } else if(numberCounter >= 11) {
         textFeedback(infoInvasionTextEl, '¡No quiero mirar! 😖');
     }
 };
