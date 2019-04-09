@@ -1,7 +1,8 @@
 'use strict';
 
 const inputEl = document.querySelector('#numberTest');
-const btnEl = document.querySelector('.btn-test');
+const btnEl = document.querySelector('.btn__test');
+const btnNewGameEl = document.querySelector('.btn__new-game');
 const userFeedbackEl = document.querySelector('.user-feedback');
 const numberCounterEl = document.querySelector('.counter');
 const infoInvasionTextEl = document.querySelector('.info-invasion');
@@ -35,6 +36,7 @@ function feedbackUser() {
 
     if(numberInput === number) {
         textFeedback(userFeedbackEl, '¡LO CONSEGUISTE, LOS ALIENS SE VAN!');
+        btnEl.disabled = true;
     } else if(numberInput > number) {
         textFeedback(userFeedbackEl, '>> Número demasiado alto <<');
     } else if(numberInput < number) {
@@ -51,4 +53,11 @@ function handleButtonClick(e) {
     trialCounter();
 }
 
+function handleNewGame(e) {
+    e.preventDefault();
+    location.reload();
+    
+}
+
 btnEl.addEventListener('click', handleButtonClick);
+btnNewGameEl.addEventListener('click', handleNewGame);

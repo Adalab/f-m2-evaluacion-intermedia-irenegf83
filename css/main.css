@@ -16,12 +16,22 @@ body {
     font-family: 'Audiowide', Helvetica, sans-serif;
     text-align: center;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.4;
     overflow: hidden;
+}
+@media all and (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+
+@media all and (min-width: 768px) {
 }
 
 .starry-night {
-    padding: 40px;
+    padding: 20px;
     height: 100vh;
     background-color:black;
     background-image:
@@ -32,10 +42,21 @@ body {
         background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
+@media all and (min-width: 768px) {
+    .starry-night {
+        padding: 40px;
+    }
+}
 
 .title {
-    margin-bottom: 40px;
-    font-size: 36px;
+    margin-bottom: 24px;
+    font-size: 30px;
+}
+@media all and (min-width: 768px) {
+    .title {
+        margin-bottom: 40px;
+        font-size: 36px;
+    }
 }
 
 .form-test {
@@ -45,41 +66,86 @@ body {
 }
 
 .numberTest__text {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+@media all and (min-width: 768px) {
+    .numberTest__text {
+        margin-bottom: 30px;
+    }
 }
 
 #numberTest {
-    width: 200px;
+    width: 90%;
     height: 40px;
-    padding: 15px;
+    padding: 0 15px;
     margin-bottom: 15px;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 16px;
     font-family: 'Coda', sans-serif;
 }
+@media all and (min-width: 768px) {
+    #numberTest {
+        width: 200px;
+        margin-top: 30px;
+    }
+}
 
-.btn-test {
+.btn {
     width: 200px;
     height: 45px;
     font-family: 'Coda', sans-serif;
     font-size: 20px;
+    cursor: pointer;
+    border: none;
 }
+.btn__test {
+    margin-bottom: 15px;
+}
+.btn__test:disabled {
+    background-color: #bbb;
+    color: #555;
+}
+.btn__new-game {
+    background-color: #9CB380;
+    color: #000;
+}
+
+
+
 
 .user-feedback {
     color: #9CB380;
-    padding: 20px ;
     margin-top: 20px;
+}
+@media all and (min-width: 768px) {
+    .user-feedback {
+        padding: 20px ;
+        margin-top: 20px;
+    }
 }
 
 .info-counter {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: #CB162A;
 }
+@media all and (min-width: 768px) {
+    .info-counter {
+        font-size: 30px;
+        font-weight: bold;
+        color: #CB162A;
+    }
+}
+
 
 .info-invasion {
     color: #aaa;
-    font-size: 16px;
+    font-size: 14px;
+}
+@media all and (min-width: 768px) {
+    .info-invasion {
+        font-size: 16px;
+    }
 }
 
 
@@ -111,7 +177,12 @@ body {
 }
 
 .left {
-    left: 90px;
+    left: 30px;
+}
+@media all and (min-width: 768px) {
+    .left {
+        left: 90px;
+    }
 }
 
 .left::before {
@@ -127,7 +198,12 @@ body {
 }
 
 .right {
-    right: 90px;
+    right: 30px;
+}
+@media all and (min-width: 768px) {
+    .right {
+        right: 90px;
+    }
 }
 
 .right::before {
@@ -143,7 +219,7 @@ body {
 }
 
 .curtain {
-    width: 90px;
+    width: 30px;
     height: 160px;
     position: absolute;
     bottom: 0;
@@ -159,6 +235,7 @@ body {
 }
 @media all and (min-width: 768px) {
     .curtain {
+        width: 90px;
         height: 240px;
     }
 }
