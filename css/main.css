@@ -1,17 +1,40 @@
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+button {
+    appearance: none;
+}
+input {
+    border-width: 0;
+    border-style: none;
+}
+
 body {
-    background-color: lightgrey;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Audiowide', Helvetica, sans-serif;
     text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+.starry-night {
     padding: 40px;
+    height: 100vh;
+    background-color:black;
+    background-image:
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 .title {
     margin-bottom: 40px;
+    font-size: 36px;
 }
 
 .form-test {
@@ -21,33 +44,44 @@ body {
 }
 
 .numberTest__text {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 #numberTest {
     width: 200px;
-    height: 25px;
-    padding: 5px;
-    margin-bottom: 10px;
+    height: 40px;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-family: 'Coda', sans-serif;
 }
 
 .btn-test {
     width: 200px;
-    padding: 10px;
+    height: 45px;
+    font-family: 'Coda', sans-serif;
+    font-size: 20px;
 }
 
 .user-feedback {
-    color: blue;
-    border: 1px solid blue;
+    color: #9CB380;
     padding: 20px ;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.number-counter {
+.info-counter {
     font-size: 30px;
     font-weight: bold;
-    color: red;
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    color: #CB162A;
+    /* margin-bottom: 30px; */
+}
+
+.info-invasion {
+    color: #aaa;
+    font-size: 16px;
+}
+
+@media all and (min-width: 768px) {
+
 }

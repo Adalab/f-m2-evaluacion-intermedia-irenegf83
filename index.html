@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adivina el número</title>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Coda:400,800" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <h1 class="title">Adivina el número</h1>
-    <p class="number-counter">0</p>
-    <form class="form-test">
-        <label class="numberTest__text" for="numberTest">Introduce aquí tu número (del 1 al 100)</label>
-        <input type="number" name="numberTest" id="numberTest">
-        <button class="btn-test" type="submit">Prueba</button>
-    </form>
-
-    <p class="user-feedback">Escribe un número y dale a prueba</p>
+    <div class="starry-night">
+        <h1 class="title">Los alienígenas han llegado</h1>
+        <form class="form-test">
+            <label class="numberTest__text" for="numberTest">Para evitar una invasión debes adivinar el número. Introduce aquí tu número (del 1 al 100)</label>
+            <p class="info-counter">Llevas: <span class="counter">0</span> intentos</p>
+            <p class="info-invasion"></p>
+            <input type="number" name="numberTest" id="numberTest">
+            <button class="btn-test" type="submit">Prueba</button>
+        </form>
+        
+        <p class="user-feedback">Escribe un número y dale a prueba</p>
+    </div>
     
     <script src="./js/main.js" type="text/javascript"></script>
 </body>

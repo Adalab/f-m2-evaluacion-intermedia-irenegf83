@@ -7,7 +7,9 @@ const btnEl = document.querySelector('.btn-test');
 // Cojo el texto de feedback al usuario
 const userFeedbackEl = document.querySelector('.user-feedback');
 // Cojo el contador de intentos
-const numberCounterEl = document.querySelector('.number-counter');
+const numberCounterEl = document.querySelector('.counter');
+// Cojo el texto de info invasión
+const infoInvasionTextEl = document.querySelector('.info-invasion');
 // Creo un contador
 let numberCounter = 0;
 
@@ -17,6 +19,18 @@ const trialCounter = () => {
     
     // mostrar cada click que hace en el contador de intentos
     numberCounterEl.innerHTML = numberCounter; 
+
+    if(numberCounter >= 5 && numberCounter < 10) {
+    // Si el contador lleva más de 6 intentos aparce un mensaje
+        // Llevas varios intentos, nos van a atacar
+        infoInvasionTextEl.innerHTML = 'Llevas varios intentos, ¡nos van a atacar!';
+    } else if(numberCounter >= 10 && numberCounter < 15) {
+        infoInvasionTextEl.innerHTML = '¡Estamos perdidos!';
+    } else if(numberCounter >= 15 && numberCounter < 20) {
+        infoInvasionTextEl.innerHTML = '¡Ay, ay, ay!';
+    } else if(numberCounter >= 20) {
+        infoInvasionTextEl.innerHTML = '¡No quiero mirar! 😖';
+    }
 }
 
 const randomNumber = () => {
@@ -42,13 +56,13 @@ function handleButtonClick(e) {
     } else if(numberInput > number) {
     // en caso contrario, si es mayor
         // Mostrar texto: "demasiado alto"
-        userFeedbackEl.innerHTML = "Número demasiado alto";
+        userFeedbackEl.innerHTML = ">> Número demasiado alto <<";
     } else if(numberInput < number) {
     // sino
         // Mostrar texto: "demasiado bajo"
-        userFeedbackEl.innerHTML = "Número demasiado bajo";
+        userFeedbackEl.innerHTML = ">> Número demasiado bajo <<";
     } else {
-        userFeedbackEl.innerHTML = "Introduce un número";
+        userFeedbackEl.innerHTML = ">> Introduce un número <<";
     }
 
     trialCounter();
