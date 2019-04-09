@@ -17,6 +17,7 @@ body {
     text-align: center;
     color: #fff;
     font-size: 18px;
+    overflow: hidden;
 }
 
 .starry-night {
@@ -74,7 +75,6 @@ body {
     font-size: 30px;
     font-weight: bold;
     color: #CB162A;
-    /* margin-bottom: 30px; */
 }
 
 .info-invasion {
@@ -82,6 +82,154 @@ body {
     font-size: 16px;
 }
 
-@media all and (min-width: 768px) {
 
+/* PORTALS */
+.portal {
+    width: 36px;
+    height: 140px;
+    position: absolute;
+    bottom: 20px;
+    border-radius: 50%;
 }
+@media all and (min-width: 768px) {
+    .portal {
+        width: 46px;
+        height: 200px;
+        bottom: 40px;
+    }
+}
+
+.portal::before,
+.portal::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+}
+
+.left {
+    left: 90px;
+}
+
+.left::before {
+    border-left: 5px solid rgba(87, 182, 255, .5);
+    background: linear-gradient(to right, rgba(87, 182, 255, .05), transparent);
+    z-index: 5;
+    box-shadow: 0 0 15px #57B6FF;
+}
+.left::after {
+    border-right: 5px solid rgba(87, 182, 255, .2);
+    z-index: 1;
+    background: radial-gradient(transparent, rgba(87, 182, 255, 1));
+}
+
+.right {
+    right: 90px;
+}
+
+.right::before {
+    border-left: 5px solid rgba(255, 171, 36, .2);
+    z-index: 1;
+    background: radial-gradient(transparent, rgba(255, 171, 36, 1));
+}
+.right::after {
+    border-right: 5px solid rgba(255, 171, 36, .5);
+    z-index: 5;
+    background: linear-gradient(to right, transparent, rgba(255, 171, 36, .05));
+    box-shadow: 0 0 15px #FFAB24;
+}
+
+.curtain {
+    width: 90px;
+    height: 160px;
+    position: absolute;
+    bottom: 0;
+    z-index: 4;
+    background-color: black;
+    background-image:
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+@media all and (min-width: 768px) {
+    .curtain {
+        height: 240px;
+    }
+}
+  
+.curtain.left {
+    left: 0;
+}
+
+.curtain.right {
+    right: 0;
+}
+
+.ufo {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    bottom: 40px;
+    left: -20px;
+    perspective: 1000px;
+    z-index: 3;
+    background-image: url('../img/ufo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: 1.5s fly 0s linear infinite;
+}
+
+.ufo__animation {
+}
+@media all and (min-width: 768px) {
+    .ufo {
+        animation: 2s fly 0s linear infinite;
+       
+    }
+}
+
+@media all and (min-width: 768px) {
+    .ufo {
+        width: 170px;
+        height: 130px;
+        bottom: 65px;
+    }
+}
+
+@keyframes fly {
+    0% {
+        transform: rotate(20deg);
+        left: 0;
+    }
+        
+    100% {
+        transform: rotate(10deg);
+        left: calc(100% - 100px);
+    }
+}
+@media all and (min-width: 768px) {
+    @keyframes fly {
+        0% {
+            transform: rotate(20deg);
+            left: 0;
+        }
+            
+        100% {
+            transform: rotate(10deg);
+            left: calc(100% - 150px);
+        }
+    }
+}
+
+
+
+
+
+

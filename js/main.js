@@ -10,8 +10,15 @@ const userFeedbackEl = document.querySelector('.user-feedback');
 const numberCounterEl = document.querySelector('.counter');
 // Cojo el texto de info invasión
 const infoInvasionTextEl = document.querySelector('.info-invasion');
+// Cojo la imagen de la nave
+const ufoEl = document.querySelector('.ufo');
 // Creo un contador
 let numberCounter = 0;
+
+function animationUfo() {
+    // cada vez que el usuario hace click en prueba la animación de la nave se activa
+    // ufoEl.classList.toggle('ufo__animation');
+}
 
 const trialCounter = () => {
     // cada vez que el usuario haga click en el botón se tiene que sumar + 1
@@ -66,6 +73,7 @@ function handleButtonClick(e) {
     }
 
     trialCounter();
+    animationUfo();
     
 }
 
