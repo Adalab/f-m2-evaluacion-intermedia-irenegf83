@@ -190,7 +190,7 @@ body {
 }
 @media all and (min-width: 768px) {
     .ufo {
-        animation: 2s fly 0s linear infinite;
+        /* animation: 2s fly 0s linear infinite; */
        
     }
 }
