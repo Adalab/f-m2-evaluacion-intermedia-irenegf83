@@ -36,6 +36,7 @@ function feedbackUser() {
 
     if(numberInput === number) {
         textFeedback(userFeedbackEl, '¡LO CONSEGUISTE, LOS ALIENS SE VAN!');
+        ufoEl.classList.remove('ufo-animation');
         btnEl.disabled = true;
     } else if(numberInput > number) {
         textFeedback(userFeedbackEl, '>> Número demasiado alto <<');
@@ -55,8 +56,7 @@ function handleButtonClick(e) {
 
 function handleNewGame(e) {
     e.preventDefault();
-    location.reload();
-    
+    location.reload();    
 }
 
 btnEl.addEventListener('click', handleButtonClick);

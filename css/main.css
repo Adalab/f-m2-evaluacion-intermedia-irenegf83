@@ -110,9 +110,6 @@ body {
     color: #000;
 }
 
-
-
-
 .user-feedback {
     color: #9CB380;
     margin-top: 20px;
@@ -136,7 +133,6 @@ body {
         color: #CB162A;
     }
 }
-
 
 .info-invasion {
     color: #aaa;
@@ -253,20 +249,21 @@ body {
     height: 100px;
     position: absolute;
     bottom: 40px;
-    left: -20px;
+    left: -80px;
     perspective: 1000px;
     z-index: 3;
     background-image: url('../img/ufo.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+
+.ufo-animation {
     animation: 1.5s fly 0s linear infinite;
 }
 
-.ufo__animation {
-}
 @media all and (min-width: 768px) {
-    .ufo {
+    .ufo-animation {
         animation: 3s fly 0s linear infinite;
        
     }
@@ -304,9 +301,3 @@ body {
         }
     }
 }
-
-
-
-
-
-

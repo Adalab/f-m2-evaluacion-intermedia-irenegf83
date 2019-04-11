@@ -15,7 +15,7 @@
             <label class="numberTest__text" for="numberTest">Para evitar una invasión debes adivinar el número. Introduce aquí tu número (del 1 al 100)</label>
             <p class="info-counter">Llevas: <span class="counter">0</span> intentos</p>
             <p class="info-invasion"></p>
-            <input type="number" name="numberTest" id="numberTest">
+            <input type="number" name="numberTest" id="numberTest" min="1" max="100">
             <button class="btn btn__test" type="submit">Prueba</button>
             <button class="btn btn__new-game">Juega otra ver</button>
         </form>
@@ -29,7 +29,7 @@
         <div class="portal left"></div>
         <div class="portal right"></div>
 
-        <div class="ufo"></div>
+        <div class="ufo ufo-animation"></div>
     </div>
     
     <script src="./js/main.js" type="text/javascript"></script>
